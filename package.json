@@ -1,0 +1,76 @@
+{
+  "name": "rsshub-lite",
+  "version": "1.0.0",
+  "description": "Make RSS Great Again!",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "start": "node lib/index.js",
+    "dev": "cross-env NODE_ENV=dev nodemon --inspect lib/index.js",
+    "profiling": "NODE_ENV=production node --prof lib/index.js",
+    "lint": "eslint .",
+    "format": "eslint \"**/*.js\" --fix && node docs/.format/format.js && prettier \"**/*.{js,json}\" --write",
+    "format:staged": "eslint \"**/*.js\" --fix && node docs/.format/format.js --staged && pretty-quick --staged --verbose --pattern \"**/*.{js,json}\"",
+    "format:check": "eslint \"**/*.js\" && prettier-check \"**/*.{js,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaitianLiu/RSSHubLite.git"
+  },
+  "keywords": [
+    "RSS"
+  ],
+  "gitHooks": {
+    "pre-commit": "npm run format:staged"
+  },
+  "author": "HaitianLiu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HaitianLiu/RSSHubLite/issues"
+  },
+  "homepage": "https://github.com/HaitianLiu/RSSHubLite#readme",
+  "devDependencies": {
+    "cross-env": "7.0.3",
+    "eslint": "7.26.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "nodemon": "2.0.7",
+    "prettier": "2.2.1",
+    "prettier-check": "2.0.0",
+    "pretty-quick": "3.1.0"
+  },
+  "dependencies": {
+    "@koa/router": "10.0.0",
+    "@postlight/mercury-parser": "2.2.0",
+    "@sentry/node": "6.3.5",
+    "art-template": "4.13.2",
+    "cheerio": "1.0.0-rc.10",
+    "date-fns": "^2.22.1",
+    "dayjs": "1.10.3",
+    "dotenv": "8.5.1",
+    "entities": "2.1.0",
+    "etag": "1.8.1",
+    "git-rev-sync": "3.0.1",
+    "got": "11.8.2",
+    "https-proxy-agent": "5.0.0",
+    "iconv-lite": "0.6.2",
+    "ioredis": "4.27.2",
+    "is-localhost-ip": "1.4.0",
+    "koa": "2.13.1",
+    "koa-basic-auth": "4.0.0",
+    "koa-favicon": "2.1.0",
+    "koa-mount": "4.0.0",
+    "lru-cache": "6.0.0",
+    "module-alias": "2.2.2",
+    "pidusage": "2.0.21",
+    "require-all": "3.0.0",
+    "rss-parser": "3.10.0",
+    "simplecc-wasm": "0.1.2",
+    "socks-proxy-agent": "5.0.0",
+    "string-similarity": "^4.0.3",
+    "torrent-search-api": "^2.1.3",
+    "tunnel": "0.0.6",
+    "winston": "3.3.3"
+  }
+}
