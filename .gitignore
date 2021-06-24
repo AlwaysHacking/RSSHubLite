@@ -15,5 +15,5 @@ tmp
 coverage
 .env
 yarn.lock
-
+package-lock.json
 .now
