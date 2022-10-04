@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@koa/router": "10.0.0",
-    "@postlight/mercury-parser": "2.2.0",
+    "@postlight/parser": "2.2.2",
     "@sentry/node": "6.3.5",
     "art-template": "4.13.2",
     "cheerio": "1.0.0-rc.10",
@@ -64,6 +64,7 @@
     "lru-cache": "6.0.0",
     "module-alias": "2.2.2",
     "pidusage": "2.0.21",
+    "re2": "^1.17.7",
     "require-all": "3.0.0",
     "rss-parser": "3.10.0",
     "simplecc-wasm": "0.1.2",

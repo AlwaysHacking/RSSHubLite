@@ -7,7 +7,7 @@ ENV TZ Asia/Shanghai
 
 RUN ln -sf /bin/bash /bin/sh
 
-RUN apt-get update && apt-get install -yq libgconf-2-4 apt-transport-https git dumb-init python make g++ build-essential --no-install-recommends && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -yq openssh-client libgconf-2-4 apt-transport-https git dumb-init python make g++ build-essential --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
