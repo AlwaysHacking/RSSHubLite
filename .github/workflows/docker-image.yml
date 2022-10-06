@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag liuhaitian/rsshub-lite:$(date +%s)
+      run: docker build . --file Dockerfile --tag liuhaitian/rsshub-lite && docker push liuhaitian/rsshub-lite
